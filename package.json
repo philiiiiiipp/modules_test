@@ -6,7 +6,7 @@
   "main": "lib/main.js",
   "scripts": {
     "clean": "rm -rf lib && rm -rf testLib",
-    "build": "npm run clean && babel src -d lib && babel test -d testLib && flow-copy-source src lib",
+    "build": "npm run clean && babel src -d lib && babel test -d testLib",
     "test": "mocha testLib"
   },
   "author": "Philipp Beau",
@@ -18,7 +18,6 @@
     "babel-preset-stage-2": "^6.17.0",
     "chai": "^3.5.0",
     "flow-bin": "^0.39.0",
-    "flow-copy-source": "^1.1.0",
     "mocha": "^3.0.0"
   },
   "babel": {

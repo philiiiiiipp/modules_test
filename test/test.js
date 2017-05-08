@@ -1,5 +1,8 @@
 /* @flow */
 
+declare var describe;
+declare var it;
+
 const expect = require('chai').expect;
 import index from '../';
 
