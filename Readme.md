@@ -40,3 +40,39 @@ Outcome
         at startup (bootstrap_node.js:150:9)
         at bootstrap_node.js:505:3
     npm ERR! Test failed.  See above for more details.
+
+The generated source is 
+
+    'use strict';
+
+    var Main = {
+      helloWorld: function helloWorld() {
+        var result = 'Hello World';
+        return result;
+      }
+    };
+
+    // Works
+    // export default Main;
+
+    // Does not work
+
+    _module.exports = Main;
+
+Should be 
+
+    'use strict';
+
+    var Main = {
+      helloWorld: function helloWorld() {
+        var result = 'Hello World';
+        return result;
+      }
+    };
+
+    // Works
+    // export default Main;
+
+    // Does not work
+
+    module.exports = Main;
